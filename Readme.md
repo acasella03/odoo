@@ -130,3 +130,5 @@ En este archivo se define el registro de la tabla creada en el modelo, con los c
 
 También se puede hacer desde la interfaz de Odoo.
 ![Imagen5](./Imagenes/5.png)
+
+![Imagen8](./Imagenes/8.png)
