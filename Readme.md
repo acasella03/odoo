@@ -37,7 +37,6 @@ Luego, creamos el archivo __manifest__.py con la información del módulo.
 > Por cada modificación de código tenemos que reiniciar el servidor Odoo. Si no hacemos esto, tenemos que desinstalar e instalar el módulo para que actualize los cambios. 
 > Es conveniente usar el campo ‘version’ del manifest para asegurarnos de que cargamos la nueva version con las modificaciones.
 
-
 ```python
 {
     'name': "openacademy",
@@ -84,8 +83,19 @@ Luego, creamos el archivo __manifest__.py con la información del módulo.
 
 ![Imagen4](./Imagenes/4.png)
 
+> [!NOTE]
+> Para evitar problemas de permisos, es recomendable ejecutar el contenedor con el usuario root, sino no podremos modificar los archivos del contenedor.
+> 
+> Ejecutar: **$ docker exec -u root -it OdooDev /bin/bash** para entrar en la terminal del contenedor como usuario root.
+> 
+> Entrar en el directorio mnt/extra-addons y ejecutar **chmod -R 777 openacademy/** para asegurar que todos sus archivos sean accesibles 
+> y modificables por todos los usuarios del contenedor.
+
 ## Crear un modelo en Odoo
 Editamos el archivo [models/tablaNombres.py](./extra-addons/openacademy/models/tablaNombres.py) con la información del modelo.
+
+> [!IMPORTANT]
+> Recuerda que si haces un modelo nuevo debes importarlo en el archivo [__init__.py](./extra-addons/openacademy/models/__init__.py)
 
 ## Crear una vista en Odoo
 Editamos el archivo [views/views.xml](./extra-addons/openacademy/views/views.xml) con la información de la vista.

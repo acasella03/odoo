@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import tablaNombres
+from . import tablaNombres, tablaPuntos

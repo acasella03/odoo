@@ -4,5 +4,9 @@
             <field name="nombre">Pepe</field>
             <field name="edad">50</field>
         </record>
+        <record model="test_model2" id="openacademy.p">
+            <field name="nombre">Jorge</field>
+            <field name="puntos">7</field>
+        </record>
     </data>
 </odoo>
